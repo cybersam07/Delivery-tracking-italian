@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delivery Tracking</title>
+    <title>Suivi de livraison</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -13,7 +13,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-color: rgba(255, 255, 255, 0.3); /* Adjust the transparency as needed */
+            background-color: rgba(255, 255, 255, 0.3); /* Ajustez la transparence selon vos besoins */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -96,7 +96,7 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            background-color: #dc3545; /* Red background color */
+            background-color: #dc3545; /* Couleur de fond rouge */
             color: #fff;
             border: none;
             padding: 5px 10px;
@@ -140,13 +140,13 @@
 </head>
 <body>
     <header>
-        <h1>Delivery Tracking System</h1>
+        <h1>Système de suivi de livraison</h1>
     </header>
     <section>
-        <div class="catchphrase">Bringing your packages closer, one delivery at a time.</div>
-        <label for="tracking-input">Enter Tracking Number:</label>
-        <input type="text" id="tracking-input" placeholder="Enter tracking number...">
-        <button id="track-button" onclick="openModal()">Track</button>
+        <div class="catchphrase">Rapprocher vos colis, une livraison à la fois.</div>
+        <label for="tracking-input">Entrez le numéro de suivi :</label>
+        <input type="text" id="tracking-input" placeholder="Entrez le numéro de suivi...">
+        <button id="track-button" onclick="openModal()">Suivre</button>
 
         <!-- Loading Spinner -->
         <div id="tracking-modal">
@@ -177,18 +177,18 @@
             setTimeout(() => {
                 if (trackingInput === '782523602BQ') {
                     // Simulate tracking result
-                    const status = 'Processing';
-                    const location = 'Distribution Center';
-                    const expectedDate = 'January 20, 2024';
+                    const status = 'En traitement';
+                    const location = 'Centre de distribution';
+                    const expectedDate = '20 janvier 2024';
 
                     trackingResult.innerHTML = `
-                        <p>Status: ${status}</p>
-                        <p>Location: ${location}</p>
-                        <p>Expected Date of Delivery: ${expectedDate}</p>
+                        <p>Statut : ${status}</p>
+                        <p>Emplacement : ${location}</p>
+                        <p>Date de livraison prévue : ${expectedDate}</p>
                     `;
                     trackingResult.classList.remove('error');
                 } else {
-                    trackingResult.innerHTML = '<p class="error">Invalid tracking number. Please try again.</p>';
+                    trackingResult.innerHTML = '<p class="error">Numéro de suivi invalide. Veuillez réessayer.</p>';
                     trackingResult.classList.add('error');
                 }
 
