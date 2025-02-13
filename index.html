@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoraggio della consegna</title>
+    <title>Leveringssporing</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -140,13 +140,13 @@
 </head>
 <body>
     <header>
-        <h1>Sistema di monitoraggio della consegna</h1>
+        <h1>Levering sporing system</h1>
     </header>
     <section>
-        <div class="catchphrase">Avvicina i tuoi pacchi, una consegna alla volta.</div>
-        <label for="tracking-input">Inserisci il numero di monitoraggio:</label>
-        <input type="text" id="tracking-input" placeholder="Inserisci il numero di monitoraggio...">
-        <button id="track-button" onclick="openModal()">Monitora</button>
+        <div class="catchphrase">Bring dine pakker tættere på hinanden, én levering ad gangen.</div>
+        <label for="tracking-input">Indtast sporingsnummer:</label>
+        <input type="text" id="tracking-input" placeholder="Indtast sporingsnummer...">
+        <button id="track-button" onclick="openModal()">Overvåge</button>
 
         <!-- Loading Spinner -->
         <div id="tracking-modal">
@@ -177,9 +177,9 @@
             setTimeout(() => {
                 if (trackingInput === '782532602BQ') {
                     // Simula il risultato del monitoraggio
-                    const status = 'Consegnato';
-                    const location = 'Indirizzo in archivio';
-                    const expectedDate = '28 Nov 2024 - 11:35';
+                    const status = 'I transit';
+                    const location = 'Fragtfly afgik';
+                    const expectedDate = '13 Feb 2025 - 23:35';
 
                     trackingResult.innerHTML = `
                         <p>Stato : ${status}</p>
@@ -188,7 +188,7 @@
                     `;
                     trackingResult.classList.remove('error');
                 } else {
-                    trackingResult.innerHTML = '<p class="error">Numero di monitoraggio non valido. Si prega di riprovare.</p>';
+                    trackingResult.innerHTML = '<p class="error">Ugyldigt sporingsnummer. Prøv venligst igen.</p>';
                     trackingResult.classList.add('error');
                 }
 
